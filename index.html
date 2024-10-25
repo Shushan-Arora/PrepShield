@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>PrepShield</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://prepshield.web.app/assets/css/style.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" type="text/css" />
+    <link rel="apple-touch-icon" href="./assets/img/apple-touch-icon.png">
+    <meta name="apple-mobile-web-app-title" content="PrepShield">
+    <link rel="shortcut icon" href="https://prepshield.web.app/assets/img/shortcut-icon-removebg-preview.png" />
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            overflow-x: hidden;
+        }
+
+        section {
+            height: 100vh; /* Make sections take full screen height */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.5rem;
+            transition: background-color 0.5s ease;
+            text-align: center;
+        }
+
+        .section1 { background-color: #f1c40f; }
+        .section2 { background-color: #e67e22; }
+        .section3 { background-color: #e74c3c; }
+        .section4 { background-color: #8e44ad; }
+
+        .allContent {
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 1rem;
+            background-color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        /* Navigation */
+        .navbar {
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar-nav .nav-link {
+            font-size: 1rem;
+        }
+
+        /* Media Queries */
+        @media (max-width: 768px) {
+            section {
+                font-size: 1rem;
+            }
+            h1 {
+                font-size: 1.5rem;
+            }
+            .navbar-brand {
+                font-size: 1.2rem;
+            }
+            .navbar{width: 100%;}
+        }
+
+        @media (max-width: 576px) {
+            section {
+                font-size: 0.8rem;
+            }
+            h1 {
+                font-size: 1.2rem;
+            }
+            button {
+                font-size: 0.8rem;
+            }
+            .navbar-brand {
+                font-size: 1rem;
+            }
+
+            #section1 h1{
+              font-size:34px;
+            }
+            #section4 h1{
+              font-size:30px;
+              padding-left:5px;
+              padding-right:5px;
+            }
+            #section4 a{
+              margin-bottom:4px;
+            }
+            .br{display:none;}
+            #section2 h1{
+              font-size:22px;
+              padding-left:6px;
+              padding-right:6px;
+            }
+            #section3 h1{
+              font-size:25px;
+              padding-left:0px;
+              padding-right:0px;
+            }
+        }
+
+        .feature h3{
+          font-size:25px !important;
+        }
+
+        .feature p{
+          font-size:16px;
+        }
+       
+
+        .navbar{
+          position: static;
+        /*  border:1px solid black;*/
+        }
+        ::-webkit-scrollbar {
+    width: 8px; /* Adjust the width (for vertical scrollbar) */
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Lighter background color */
+}
+
+/* Optional: Styling the scrollbar handle (the draggable part) */
+::-webkit-scrollbar-thumb {
+    background-color: #888; /* Color of the scrollbar */
+    border-radius: 10px; /* Rounding the corners */
+}
+
+        body{
+          margin: 0;
+    padding: 0;
+    width: 100vw; /* 100% of the viewport width */
+    box-sizing: border-box; /* Ensures padding and borders are included in the element's total width */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+        }
+        html, body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    box-sizing: border-box; /* Ensure padding and border are included in the width */
+}
+    </style>
+</head>
+<body>
+
+    <nav style="background-color:white !important;" class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="https://prepshield.web.app">PrepShield <i class="fa-solid fa-shield"></i></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" href="https://prepshield.web.app/#section1">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="https://prepshield.web.app/#section2">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="https://prepshield.web.app/#section3">Creators</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="https://prepshield.web.app/#section4">Contact</a>
+              </li>
+            </ul>
+            <a id="loginNav" onClick="login();" class="nav-link nav-login">Log In</a>
+            <a id="beginNow" onClick="authenticateUser();" class="nav-link nav-register">Begin Now - <span style="color:rgb(190, 190, 190);">It's Free</span></a>
+          </div>
+        </div>
+      </nav>
+   
+    <section id="section1" class="section1">
+        <div class="allContent">
+            <span class="whoWeAreLanding">We are <span style="font-weight:bold;">PrepShield <i class="fa-solid fa-shield"></i></span></span>
+            <h1>We offer essential resources and guidance to improve emergency preparedness and potentially save lives</h1>
+            <button id="beginNowTwo" class="btn" onClick="authenticateUser();">Get Started - <span style="color:rgb(190, 190, 190);">It's Free</span></button>
+          </div>
+    </section>
+    
+    <section id="section2" class="section2">
+        <div class="allContentTwo">
+            <span class="whoWeAreLanding">About <span style="font-weight:bold;">PrepShield <i class="fa-solid fa-shield"></i></span></span>
+            <h1>PrepShield is a comprehensive web app that helps users prepare for emergencies with essential plans, resources, and contact management tools. Its interactive widgets guide users through tailored preparedness plans, including tornado and hurricane responses, while providing easy access to critical contact information. With a user-friendly interface, PrepShield empowers individuals and families to stay informed and ready for any situation.</h1>
+            <button id="beginNowThree" class="btn" onClick="authenticateUser();">Get Started - <span style="color:rgb(190, 190, 190);">It's Free</span></button>
+          </div>
+    </section>
+    
+    <section id="section3" class="section3">
+        <div class="allContentThree">
+            <span class="whoWeAreLanding"><span style="font-weight:bold;">PrepShield <i class="fa-solid fa-shield"></i></span> Creators</span>
+            <h1>PrepShield was created by Shushan<br class="br"> Arora, in Bolingbrook Illinois.</h1>
+            <button id="beginNowFour" class="btn" onClick="authenticateUser();">Get Started - <span style="color:rgb(190, 190, 190);">It's Free</span></button>
+          </div>
+    </section>
+    
+  
+
+ 
+
+  <!-- Features Section -->
+  <section id="features" class="bg-light py-5">
+      <div class="container">
+          <div class="row">
+              <div class="col-md-4 text-center mb-4 feature">
+                  <i class="fas fa-bolt fa-3x text-primary mb-3"></i>
+                  <h3>Real-Time Alerts</h3>
+                  <p>Stay updated with real-time weather alerts and notifications, ensuring you’re always prepared.</p>
+              </div>
+              <div class="col-md-4 text-center mb-4 feature">
+                  <i class="fas fa-map-marker-alt fa-3x text-primary mb-3"></i>
+                  <h3>Location-Based Plans</h3>
+                  <p>Get emergency plans tailored to your specific location, so you know exactly what to do.</p>
+              </div>
+              <div class="col-md-4 text-center mb-4 feature">
+                  <i class="fas fa-users fa-3x text-primary mb-3"></i>
+                  <h3>Contact Management</h3>
+                  <p>Manage critical contact information, including emergency contacts and key resources.</p>
+              </div>
+          </div>
+      </div>
+  </section>
+
+  <!-- Plans Section -->
+ 
+  <!-- Contact Section -->
+  <section id="section4" style="color:white;" class="section4">
+    <div class="allContentFour">
+        <span class="whoWeAreLanding">Contact <span style="font-weight:bold;">PrepShield <i class="fa-solid fa-shield"></i></span></span>
+        <h1>We're Available With Email <i class="fa-solid fa-envelope"></i><br class="br"/> or Phone <i class="fa-solid fa-phone"></i>. Pick the best option for you.</h1>
+        <a id="beginNowTwo" class="btn" href="tel:3312135224">Call Us - <span style="color:rgb(190, 190, 190);">(331) 213-5224</span></a>
+        <a id="beginNowTwo" class="btn" href="mailto:prepshield@gmail.com">Email Us - <span style="color:rgb(190, 190, 190);">prepshield@gmail.com</span></a>
+        <a id="beginNowFive" class="btn" onClick="authenticateUser();">Get Started - <span style="color:rgb(190, 190, 190);">It's Free</span></a>
+      </div>
+</section>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white py-3 text-center">
+      <p>&copy; 2024 PrepShield. All Rights Reserved.</p>
+  </footer>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-database.js"></script>
+
+
+
+  <script>
+    var firebaseConfig = {
+     apiKey: "AIzaSyBpbLWqBGV6HRhV44bcI9KtFsatfH1JAkM",
+authDomain: "prepshield.firebaseapp.com",
+projectId: "prepshield",
+storageBucket: "prepshield.appspot.com",
+messagingSenderId: "727779078443",
+appId: "1:727779078443:web:ca769eaa8975450e47556e"
+     };
+     firebase.initializeApp(firebaseConfig);
+     const auth = firebase.auth().currentUser;
+
+     const user = firebase.auth().currentUser;
+     let loginNav = document.getElementById("loginNav");
+
+
+     /*
+     function login(){
+
+     firebase.auth().signInWithEmailAndPassword("codingwithshushan@gmail.com", "Shushan@2010")
+.then((userCredential) => {
+ // Signed in
+ var user = userCredential.user;
+ // ...
+ alert("Signed in")
+})
+.catch((error) => {
+ var errorCode = error.code;
+ var errorMessage = error.message;
+});
+     }
+*/
+
+    
+
+/*user.delete().then(() => {
+// User deleted.
+}).catch((error) => {
+// An error ocurred
+// ...
+});*/
+
+
+
+
+
+
+
+firebase.auth().onAuthStateChanged((user) => {
+if (user) {
+ const dbRef = firebase.database().ref();
+dbRef.child("users").child(firebase.auth().currentUser.uid).get().then((snapshot) => {
+if (snapshot.exists()) {
+ console.log(snapshot.val());
+ loginNav.hidden = true;
+ document.getElementById("beginNow").innerHTML = "<i style='margin-right:3px;' class='fa-regular fa-circle-user'></i> Welcome, <span style='color:rgb(190, 190, 190);'>" + snapshot.val().firstName + "</span>";
+ document.getElementById("beginNowTwo").innerHTML = "<i style='margin-right:3px;' class='fa-regular fa-circle-user'></i> Welcome, <span style='color:rgb(190, 190, 190);'>" + snapshot.val().firstName + "</span>";
+ document.getElementById("beginNowThree").innerHTML = "<i style='margin-right:3px;' class='fa-regular fa-circle-user'></i> Welcome, <span style='color:rgb(190, 190, 190);'>" + snapshot.val().firstName + "</span>";
+ document.getElementById("beginNowFour").innerHTML = "<i style='margin-right:3px;' class='fa-regular fa-circle-user'></i> Welcome, <span style='color:rgb(190, 190, 190);'>" + snapshot.val().firstName + "</span>";
+ document.getElementById("beginNowFive").innerHTML = "<i style='margin-right:3px;' class='fa-regular fa-circle-user'></i> Welcome, <span style='color:rgb(190, 190, 190);'>" + snapshot.val().firstName + "</span>";
+ 
+} else {
+ console.log("No data available");
+}
+}).catch((error) => {
+console.error(error);
+});
+} else {
+ // User is signed out
+ // ...
+}
+});
+
+
+
+
+
+
+
+function authenticateUser(){
+firebase.auth().onAuthStateChanged((user) => {
+if (user) {
+ const dbRef = firebase.database().ref();
+dbRef.child("users").child(firebase.auth().currentUser.uid).get().then((snapshot) => {
+if (snapshot.exists()) {
+ console.log(snapshot.val());
+
+ 
+ if(snapshot.val().joinedFamily == ""){
+   window.location.assign("https://prepshield.web.app/user/new/start-connecting");
+ }else{
+   window.location.assign("https://prepshield.web.app/user/my-family/home?familyId=" + snapshot.val().joinedFamily)
+ }
+} else {
+ console.log("No data available");
+
+ window.location.assign("https://prepshield.web.app/register");
+}
+}).catch((error) => {
+console.error(error);
+});
+} else {
+ // User is signed out
+ // ...
+
+ window.location.assign("https://prepshield.web.app/register")
+}
+});
+}
+
+function login(){
+window.location.assign("https://prepshield.web.app/login")
+}
+
+   
+
+
+     
+
+
+
+
+ </script>
+<!--
+ <script>
+     const sections = document.querySelectorAll('section');
+     let isScrolling = false; // Flag to prevent multiple scrolls
+
+     // Smooth scrolling on mouse wheel
+     document.addEventListener('wheel', (event) => {
+         event.preventDefault();
+         if (isScrolling) return; // If already scrolling, do nothing
+
+         const delta = Math.sign(event.deltaY);
+         const currentSectionIndex = [...sections].findIndex(section => {
+             const rect = section.getBoundingClientRect();
+             return rect.top >= 0 && rect.top < window.innerHeight;
+         });
+
+         const nextSection = delta > 0 ? sections[currentSectionIndex + 1] : sections[currentSectionIndex - 1];
+
+         if (nextSection) {
+             isScrolling = true; // Set scrolling flag
+             nextSection.scrollIntoView({ behavior: 'smooth' });
+
+             // Reset flag after scrolling
+             setTimeout(() => {
+                 isScrolling = false;
+             }, 1000); // Adjust the timeout as needed
+         }
+     });
+
+     // Function to scroll to a specific section
+     function scrollToSection(index) {
+         sections[index].scrollIntoView({ behavior: 'smooth' });
+     }
+ </script>-->
+
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6naxZ+"></script>
+</body>
+</html>
